@@ -7,8 +7,7 @@ public class kamera : MonoBehaviour {
 	
 	void RuchKamery(){
 				
-			Vector3 wektor = new Vector3 (2*Time.deltaTime, 0, 0);
-			transform.Translate (wektor);
+	
 
 	}
 	// Use this for initialization
@@ -17,7 +16,8 @@ public class kamera : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void FixedUpdate () {RuchKamery ();
+	void FixedUpdate () {
+        RuchKamery ();
 	
 	}
 }

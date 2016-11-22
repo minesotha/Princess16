@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class s : MonoBehaviour {
+public class gameManagement : MonoBehaviour {
 	
 	public int kasa = 0;
 	public int zycia=3;

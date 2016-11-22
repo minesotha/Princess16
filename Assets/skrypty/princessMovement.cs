@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class skakanie669 : MonoBehaviour {
+public class princessMovement : MonoBehaviour {
 	
 	Vector3 predkosc = Vector3.zero;
 	public GameObject Fireball;
@@ -25,13 +25,17 @@ public class skakanie669 : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-			if (Input.GetKeyDown (KeyCode.Escape)) { //zeby dalo sie wyjsc normalnie z gry
-			Application.LoadLevel(0); 
+			        if (Input.GetKeyDown (KeyCode.Escape)) { //zeby dalo sie wyjsc normalnie z gry
+			          Application.LoadLevel(0); 
 				}
 	}
 	
 	void FixedUpdate(){
-				if (czyPodloga == true) {	
+        //ruch postaci
+        Vector3 wektor = new Vector3(2 * Time.deltaTime, 0, 0);
+        transform.Translate(wektor);
+
+        if (czyPodloga == true) {	
 						if (Input.GetKey (KeyCode.RightArrow) || Input.GetMouseButton (1) || (Input.touchCount == 1 && Input.GetTouch (0).position.x > (Screen.height / 2))) {
 								//AUhopsa.audio.Play ();
 								predkosc += predkoscSkoku;
