@@ -15,7 +15,7 @@ public class EnemyMovement : MonoBehaviour {
 		GetComponent<Rigidbody2D>().velocity = new Vector2 (1, 0);
 		}
 
-	void ObrocSieBucu(){
+	void enemyTurning(){
 		Vector3 theScale = transform.localScale;
 		theScale.x *= -1;
 		transform.localScale = theScale;
@@ -24,7 +24,7 @@ public class EnemyMovement : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		ObrocSieBucu ();
+		enemyTurning ();
 
 	}
 	
@@ -35,7 +35,7 @@ public class EnemyMovement : MonoBehaviour {
 
 		if (time >= czas_rozn) {
 			if(obrot == false){
-				ObrocSieBucu ();
+				enemyTurning ();
 				obrot = true;
 			}
 
@@ -45,7 +45,7 @@ public class EnemyMovement : MonoBehaviour {
 		}
 		if (time >= (czas_rozn + 3.0f)) {
 			time = 0;
-			ObrocSieBucu ();
+			enemyTurning ();
 			obrot = false;
 				}
 

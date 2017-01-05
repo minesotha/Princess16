@@ -24,12 +24,12 @@ public class s : MonoBehaviour {
 	
 	void OnGUI () {
 		GUI.Box (new Rect (Screen.width - 25,5,20,20),monety);
-		GUI.Box (new Rect (Screen.width - 25,25,20,20), zycia.ToString());
+		GUI.Box (new Rect (Screen.width - 25,25,20,20), zycia.ToString()); //wyświetlanie liczników w odpowiednim położeniu ekranu
 	}
 
 	void OnCollisionStay(Collision dotyk){
 		if (dotyk.gameObject.tag == "Trap")
-						zycia--;
+						zycia--; //odejmowanie punktów życia po wpadnięciu na pułapkę
 		}
 
 
@@ -38,13 +38,13 @@ public class s : MonoBehaviour {
 			AUmonety.GetComponent<AudioSource>().Play ();
 			Destroy (coll.gameObject);
 			kasa += 1;
-			monety = kasa.ToString ();
+			monety = kasa.ToString (); //zbieranie monet
 				}
 		else if (coll.gameObject.tag == "Skrzynia") {
 			AUmonety.GetComponent<AudioSource>().Play ();
 			Destroy (coll.gameObject);
 			kasa += 10;
-			monety = kasa.ToString ();
+			monety = kasa.ToString ();  //zbieranie skrzyń z monetami
 		}
 
 		else if (coll.gameObject.tag == "Enemy"||coll.gameObject.tag=="Trap"||coll.gameObject.tag=="Heart") {
@@ -53,22 +53,22 @@ public class s : MonoBehaviour {
 			case "Enemy":
 				Destroy(coll.gameObject);
 				AUprzeciwnik.GetComponent<AudioSource>().Play();
-				zycia--;
+				zycia--; //odejmowanie punktów życia po wpadnięciu na przeciwnika
 				break;
 			case "Trap":
 				AUprzeciwnik.GetComponent<AudioSource>().Play();
 				coll.gameObject.GetComponent<Collider2D>().enabled=false;
-				zycia--;
+				zycia--;  //odejmowanie punktów życia po wpadnięciu na pułapkę
 				break;
 			case "Heart":
 				AUmonety.GetComponent<AudioSource>().Play ();
 				Destroy (coll.gameObject);
-				zycia++;
+				zycia++;  //zbieranie punktów życia
 				break;
 			
 			}
 			if (zycia>0){
-				switch (zycia)
+				switch (zycia) // wyświetlanie się nakładki z teksturą krwi w zależności od liczby punktów życia
 				{
 				case 1:
 					bol1.enabled=false;
@@ -101,7 +101,7 @@ public class s : MonoBehaviour {
 		
 
 			else if (zycia<=0){
-				gameover.enabled=true;
+				gameover.enabled=true; //wyświetlanie ekranu "game over"
 				bol3.enabled=false;
 				Time.timeScale=0.0f;
 				AUprzegrana.GetComponent<AudioSource>().Play();

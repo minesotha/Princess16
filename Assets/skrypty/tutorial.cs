@@ -11,7 +11,7 @@ public class tutorial : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKey (KeyCode.Space) || Input.GetMouseButton (0) || (Input.touchCount == 1)) {
-			Application.LoadLevel (2);
+			Application.LoadLevel (2); // ładowanie tutorialu
 				}
 	}
 }
