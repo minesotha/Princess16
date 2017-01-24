@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class skalowanie : MonoBehaviour {
+public class scaleTextures : MonoBehaviour {
 
-	// 
+	// skalowanie tekstur do ekranu
 	public Texture tekstura;
 
 

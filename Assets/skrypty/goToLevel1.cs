@@ -1,14 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class level1 : MonoBehaviour {
+public class goToLevel1 : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
+//ładowanie pierwszego poziomu po dotknieciu mety
 
 	void OnTriggerEnter2D(Collider2D coll){
 		if  (coll.gameObject.tag == "Player") {

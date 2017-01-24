@@ -3,6 +3,7 @@ using System.Collections;
 
 public class gameManagement : MonoBehaviour {
 	
+    //zarządzanie gui, znajdzkami, zyciem
 	public int kasa = 0;
 	public int zycia=3;
 	public string monety;
@@ -11,10 +12,11 @@ public class gameManagement : MonoBehaviour {
 	public GUITexture bol1, bol2, bol3,gameover;
 	public float szybkoscGry=0.5f;
 	
-	// Use this for initialization
+
 	void Start () {
 		Time.timeScale=szybkoscGry;
 		monety="0";
+        //dostępne pociski
 		bol1.enabled = false;
 		bol2.enabled = false;
 		bol3.enabled = false;
@@ -111,6 +113,7 @@ public class gameManagement : MonoBehaviour {
 			}
 				
 		}
+        //obłsuga za szybkiej lub spóźnionej księżniczki
 			else if (coll.gameObject.tag=="Koniec_Ekranu"){
 		//	transform.position = new Vector3(transform.position.x+0.5f, transform.position.y, transform.position.z);
 			//lub w razie jakbyśmy nie chcieli, by się teleportował

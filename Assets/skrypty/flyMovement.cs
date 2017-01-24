@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Lot : MonoBehaviour {
-	
+public class flyMovement : MonoBehaviour {
+	//ruch latających przeciwników
 	public float time = 0;
 
 	void EnemyMov2(){

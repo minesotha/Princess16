@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ruchTla : MonoBehaviour {
+public class moveBackground : MonoBehaviour {
 		public float tlo;
 
     //kamera porusza się jednostajnie

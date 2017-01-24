@@ -13,10 +13,7 @@ public class princessMovement : MonoBehaviour {
 	private bool czyPodloga=true;
 	public int maxIloscPociskow=1;
 
-	
-	//bool skok = false;
-	
-	
+
 	
 	// Use this for initialization
 	void Start () {
@@ -55,7 +52,6 @@ public class princessMovement : MonoBehaviour {
 		}
 
 	// Ustawic hasanie na 1, zeby hasała
-
 	void OnCollisionEnter2D(Collision2D coll){
 		if (coll.gameObject.tag == "Podloga") {
 						predkosc = hasanie;
@@ -74,6 +70,5 @@ public class princessMovement : MonoBehaviour {
 	void Pocisk() {
 		Instantiate (Fireball, transform.position, transform.rotation);
 		AUfireball.GetComponent<AudioSource>().Play ();
-		Debug.Log ("FIRE FIRE!");
 	}
 }

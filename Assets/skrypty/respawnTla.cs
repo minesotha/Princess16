@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class respawn_tla : MonoBehaviour {
+public class respawnTla : MonoBehaviour {
 
 void OnTriggerEnter2D(Collider2D collider){
 		Vector3 pos = collider.transform.position;
